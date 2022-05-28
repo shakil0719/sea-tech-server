@@ -41,10 +41,10 @@ async function run() {
     await client.connect();
 
     //database
-    const productCollection = client.db("sea_tech").collection("products");
-    const userCollection = client.db("sea_tech").collection("users");
-    const reviewCollection = client.db("sea_tech").collection("reviews");
-    const orderCollection = client.db("sea_tech").collection("orders");
+    const productCollection = client.db("jabir").collection("products");
+    const userCollection = client.db("jabir").collection("users");
+    const reviewCollection = client.db("jabir").collection("reviews");
+    const orderCollection = client.db("jabir").collection("orders");
 
     ////////
     const verifyAdmin = async (req, res, next) => {

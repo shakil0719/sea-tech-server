@@ -2,13 +2,14 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const cors = require("cors");
+
 const jwt = require("jsonwebtoken");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 const res = require("express/lib/response");
 const query = require("express/lib/middleware/query");
 
-app.use(cors());
+app.use(cors({origin: "https://darkstar-2113e.web.app/"}));
 app.use(express.json());
 
 const port = process.env.PORT || 5000;
